@@ -1,0 +1,28 @@
+<mat-form-field appearance="standard">
+    <mat-label>Filtro</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Coloque algum dado" #input>
+
+    <smart-table #table id="table" style="width: 850px;">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of tableData">
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.id }}</td>
+                    <td>${{ row.id }}</td>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.id }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </smart-table>
+
+</mat-form-field>
